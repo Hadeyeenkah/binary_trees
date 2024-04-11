@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "binary_trees.h"
 
 /**
  * binary_tree_delete - deletes an entire binary tree
@@ -10,12 +10,7 @@ void binary_tree_delete(binary_tree_t *tree)
 {
 	if (!tree)
 		return;
-	/*delete right subtree*/
 	binary_tree_delete(tree->right);
-
-	/*delete the left subtree*/
 	binary_tree_delete(tree->left);
-
-	/*delete the current node*/
 	free(tree);
 }
