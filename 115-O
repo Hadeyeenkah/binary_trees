@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("Inserting the value n: O(log n)\n");
+
+    printf("Removing the node with the value n: O(log n)\n");
+
+    printf("Searching for a node in a Binary Search Tree of size n: O(log n)\n");
+
+    return 0;
+}I

@@ -1,5 +1,7 @@
 #include "binary_trees.h"
 
+int _pow_recursion(int x, int y);
+
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect
  * @tree: a pointer to the root node of the tree to check
@@ -42,7 +44,6 @@ int _pow_recursion(int x, int y)
 		return (1);
 	else
 		return (x * _pow_recursion(x, y - 1));
-
 }
 
 /**
@@ -79,3 +80,4 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	height_r = tree->right ? 1 + binary_tree_height(tree->right) : 0;
 	return (height_l > height_r ? height_l : height_r);
 }
+
