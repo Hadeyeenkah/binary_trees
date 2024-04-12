@@ -16,7 +16,7 @@ binary_tree_t *find_ancestor(const binary_tree_t *root,
 	binary_tree_t *left, *right;
 
 	if (root == NULL)
-		return NULL;
+		return (NULL);
 
 	if (root == first || root == second)
 		return (binary_tree_t *)root;
@@ -27,7 +27,7 @@ binary_tree_t *find_ancestor(const binary_tree_t *root,
 	if (left && right)
 		return (binary_tree_t *)root;
 
-	return left ? left : right;
+	return (left ? left : right);
 }
 
 /**
@@ -42,7 +42,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
 	if (first == NULL || second == NULL)
-		return NULL;
+		return (NULL);
 
-	return find_ancestor(first, first, second);
+	return (find_ancestor(first, first, second));
 }
